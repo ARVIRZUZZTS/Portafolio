@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Fan Carousel · Winkode</title>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- =========================================================
+         CONTENIDO PRINCIPAL
+         ========================================================= -->
+    <main class="main-content">
+        <div class="content-container">
+
+            <div class="page-header">
+                <div class="badge-tag">Card Fan</div>
+                <h1 class="page-title">Fan Carousel with GSAP</h1>
+                <p class="page-subtitle">
+                    Carrusel de tarjetas con efecto de abanico usando GSAP,
+                    navegación por flechas y dots, y animaciones de entrada elásticas.
+                </p>
+            </div>
+
+            <!-- =====================================================
+                 COMPONENTE CARD FAN CAROUSEL
+                 ===================================================== -->
+            <div class="fan-carousel" id="fanCarousel">
+                <div class="fan-layout" id="fanLayout"></div>
+
+                <!-- Controles de navegación -->
+                <div class="fan-controls">
+                    <button type="button" class="fan-arrow" id="fanPrev" aria-label="Previous">
+                        <i data-lucide="chevron-left"></i>
+                    </button>
+                    <div class="fan-dots" id="fanDots"></div>
+                    <button type="button" class="fan-arrow" id="fanNext" aria-label="Next">
+                        <i data-lucide="chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STATS -->
+            <div class="stats-row">
+                <div class="metric-card">
+                    <div class="metric-icon blue">
+                        <i data-lucide="images"></i>
+                    </div>
+                    <div class="metric-info">
+                        <span class="metric-label">Cards</span>
+                        <span class="metric-value">10</span>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon green">
+                        <i data-lucide="wind"></i>
+                    </div>
+                    <div class="metric-info">
+                        <span class="metric-label">Efecto</span>
+                        <span class="metric-value">Fan</span>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon purple">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+                    <div class="metric-info">
+                        <span class="metric-label">Animación</span>
+                        <span class="metric-value">GSAP</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast" hidden>
+        <i data-lucide="check-circle-2"></i>
+        <span id="toastText">Acción completada</span>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

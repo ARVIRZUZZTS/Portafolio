@@ -1,0 +1,112 @@
+/* =====================================================================
+   TOKENS · Portafolio David E. Chávez Totora
+   Paleta K/DA extraída de DESIGN_SYSTEM.md
+   Tema oscuro por defecto; .theme-light en <html> activa el claro.
+   ===================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600&family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  /* Fondos */
+  --bg-deep: #0b0519;
+  --bg-base: #0e0a2f;
+  --bg-violet: #14003c;
+  --bg-navy: #221c66;
+
+  /* Morados */
+  --purple-100: #b296fd;
+  --purple-300: #9179d3;
+  --purple-500: #6c5d9b;
+  --purple-700: #473b66;
+  --purple-900: #2a2140;
+  --purple-dark: #221c66;
+
+  /* Neones */
+  --neon-magenta: #ff58fe;
+  --neon-magenta-deep: #dc03f8;
+  --neon-pink-light: #febcfe;
+  --neon-cyan: #5bffff;
+  --neon-blue: #6ab9fe;
+
+  /* Texto */
+  --text: #fdfdfd;
+  --text-ice: #bdf0ff;
+  --text-lavender: #b296fd;
+  --text-muted: rgba(178, 150, 253, 0.65);
+
+  /* Superficies · cards en el color del navbar (indigo) al 48% */
+  --card: rgba(14, 10, 47, 0.48);
+  --card-border: rgba(178, 150, 253, 0.22);
+  --card-hover: rgba(91, 255, 255, 0.22);
+  --tag-bg: rgba(91, 255, 255, 0.14);
+
+  /* Tinta (background_1 lee estas variables) */
+  --background: #0e0a2f;
+  --foreground: #f4e9ff;
+  --ns-muted: #2f7f96;
+  --border: #1d5a6e;
+  --ns-accent: #5bffff;
+
+  /* Tipografía */
+  --font-display: "Exo 2", system-ui, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, monospace;
+
+  /* Formas y efectos */
+  --radius: 1.25rem;
+  --radius-sm: 0.6rem;
+  --radius-lg: 2rem;
+  --glow-magenta: 0 0 24px rgba(255, 88, 254, 0.35);
+  --glow-cyan: 0 0 24px rgba(91, 255, 255, 0.3);
+  --glow-lavender: 0 0 30px rgba(178, 150, 253, 0.4);
+  --shadow-card: 0 8px 40px rgba(0, 0, 0, 0.45);
+
+  /* Layout */
+  --nav-h: 68px;
+  --max-w: 1200px;
+
+  color-scheme: dark;
+}
+
+/* ------------------ Tema claro ------------------ */
+.theme-light {
+  --bg-deep: #ece5fc;
+  --bg-base: #f6f3ff;
+  --bg-violet: #ede6fe;
+  --bg-navy: #e3d9fa;
+
+  --purple-100: #8b5cf6;
+  --purple-300: #7c4fd0;
+  --purple-500: #a78bfa;
+  --purple-700: #ddd0f7;
+  --purple-900: #efeafd;
+  --purple-dark: #e7dcfb;
+
+  --neon-magenta: #e503e0;
+  --neon-magenta-deep: #b403ae;
+  --neon-pink-light: #c026d3;
+  --neon-cyan: #0891b2;
+  --neon-blue: #4f46e5;
+
+  --text: #1a1030;
+  --text-ice: #3b2a63;
+  --text-lavender: #7c4fd0;
+  --text-muted: rgba(60, 40, 100, 0.68);
+
+  --card: rgba(246, 243, 255, 0.48);
+  --card-border: rgba(124, 77, 208, 0.26);
+  --card-hover: rgba(8, 145, 178, 0.18);
+  --tag-bg: rgba(8, 145, 178, 0.12);
+
+  --background: #f6f3ff;
+  --foreground: #1a1030;
+  --ns-muted: #8a7bb0;
+  --border: #c9bbeb;
+  --ns-accent: #0891b2;
+
+  --glow-magenta: 0 0 24px rgba(229, 3, 224, 0.28);
+  --glow-cyan: 0 0 24px rgba(8, 145, 178, 0.25);
+  --glow-lavender: 0 0 30px rgba(124, 77, 208, 0.3);
+  --shadow-card: 0 8px 40px rgba(76, 29, 149, 0.12);
+
+  color-scheme: light;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GlassCard</title>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="navbar-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.667 31.69" class="logo-svg">
+            <path d="M12.827,1.628A1.561,1.561,0,0,1,14.31,0h2.964a1.561,1.561,0,0,1,1.483,1.628v11.9a9.252,9.252,0,0,1-2.432,6.852q-2.432,2.409-6.963,2.409T2.4,20.452Q0,18.094,0,13.669V1.628A1.561,1.561,0,0,1,1.483,0h2.98A1.561,1.561,0,0,1,5.947,1.628V13.191a5.635,5.635,0,0,0,.85,3.451,3.153,3.153,0,0,0,2.632,1.094,3.032,3.032,0,0,0,2.582-1.076,5.836,5.836,0,0,0,.816-3.486Z" />
+            <path d="M75.207,20.857a1.561,1.561,0,0,1-1.483,1.628h-2.98a1.561,1.561,0,0,1-1.483-1.628V1.628A1.561,1.561,0,0,1,70.743,0h2.98a1.561,1.561,0,0,1,1.483,1.628Z" transform="translate(-45.91 0)" />
+            <path d="M0,80.018A1.561,1.561,0,0,1,1.483,78.39h26.7a1.561,1.561,0,0,1,1.483,1.628v2.006a1.561,1.561,0,0,1-1.483,1.628H1.483A1.561,1.561,0,0,1,0,82.025Z" transform="translate(0 -51.963)" />
+        </svg>
+        <span>Winkode</span>
+    </div>
+</nav>
+
+<!-- CONTENEDOR -->
+<main class="page">
+
+    <!-- HEADER -->
+    <header class="page-header">
+        <span class="badge">Card</span>
+        <h1>GlassCard</h1>
+    </header>
+
+    <!-- GLASS CARD -->
+    <div class="card-scene" id="cardScene">
+        <div class="glass-card" id="glassCard">
+
+            <!-- Capa de vidrio -->
+            <div class="glass-layer"></div>
+
+            <!-- Contenido -->
+            <div class="card-content">
+                <h2 class="card-title">Monochrome</h2>
+                <p class="card-description">
+                    Create, share, and use beautiful custom elements made with CSS.
+                </p>
+            </div>
+
+            <!-- Footer: botones sociales + view more -->
+            <div class="card-footer">
+                <div class="social-buttons">
+                    <button class="social-btn" style="transition-delay: 400ms" aria-label="Instagram">
+                        <i data-lucide="instagram"></i>
+                    </button>
+                    <button class="social-btn" style="transition-delay: 600ms" aria-label="Twitter">
+                        <i data-lucide="twitter"></i>
+                    </button>
+                    <button class="social-btn" style="transition-delay: 800ms" aria-label="GitHub">
+                        <i data-lucide="github"></i>
+                    </button>
+                </div>
+                <a href="#" class="view-more">
+                    <span>View more</span>
+                    <i data-lucide="chevron-down"></i>
+                </a>
+            </div>
+
+            <!-- Círculos animados -->
+            <div class="circles">
+                <div class="circle" style="width:170px; top:8px; right:8px; transform:translate3d(0,0,20px); transition-delay:0s"></div>
+                <div class="circle" style="width:140px; top:10px; right:10px; transform:translate3d(0,0,40px); transition-delay:0.4s"></div>
+                <div class="circle" style="width:110px; top:17px; right:17px; transform:translate3d(0,0,60px); transition-delay:0.8s"></div>
+                <div class="circle" style="width:80px; top:23px; right:23px; transform:translate3d(0,0,80px); transition-delay:1.2s"></div>
+                <div class="circle circle-logo" style="width:50px; top:30px; right:30px; transform:translate3d(0,0,100px); transition-delay:1.6s">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.667 31.69" class="logo-svg">
+                        <path d="M12.827,1.628A1.561,1.561,0,0,1,14.31,0h2.964a1.561,1.561,0,0,1,1.483,1.628v11.9a9.252,9.252,0,0,1-2.432,6.852q-2.432,2.409-6.963,2.409T2.4,20.452Q0,18.094,0,13.669V1.628A1.561,1.561,0,0,1,1.483,0h2.98A1.561,1.561,0,0,1,5.947,1.628V13.191a5.635,5.635,0,0,0,.85,3.451,3.153,3.153,0,0,0,2.632,1.094,3.032,3.032,0,0,0,2.582-1.076,5.836,5.836,0,0,0,.816-3.486Z" />
+                        <path d="M75.207,20.857a1.561,1.561,0,0,1-1.483,1.628h-2.98a1.561,1.561,0,0,1-1.483-1.628V1.628A1.561,1.561,0,0,1,70.743,0h2.98a1.561,1.561,0,0,1,1.483,1.628Z" transform="translate(-45.91 0)" />
+                        <path d="M0,80.018A1.561,1.561,0,0,1,1.483,78.39h26.7a1.561,1.561,0,0,1,1.483,1.628v2.006a1.561,1.561,0,0,1-1.483,1.628H1.483A1.561,1.561,0,0,1,0,82.025Z" transform="translate(0 -51.963)" />
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

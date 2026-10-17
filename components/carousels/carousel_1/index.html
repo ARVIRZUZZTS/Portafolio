@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Stack Carousel · Winkode</title>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- =========================================================
+         CONTENIDO PRINCIPAL
+         ========================================================= -->
+    <main class="main-content">
+        <div class="content-container">
+
+            <div class="page-header">
+                <div class="badge-tag">Card Stack</div>
+                <h1 class="page-title">3D Card Stack Carousel</h1>
+                <p class="page-subtitle">
+                    Carrusel de tarjetas con efecto de abanico 3D, auto-avance,
+                    navegación por teclado y arrastre para cambiar entre tarjetas.
+                </p>
+            </div>
+
+            <!-- =====================================================
+                 COMPONENTE CARD STACK
+                 ===================================================== -->
+            <div class="card-stack" id="cardStack">
+                <div class="stack-stage" id="stackStage">
+                    <div class="stack-spotlight" aria-hidden="true"></div>
+                    <div class="stack-cards" id="stackCards"></div>
+                </div>
+
+                <!-- Dots de navegación y link externo -->
+                <div class="stack-dots" id="stackDots"></div>
+                <a href="#" target="_blank" rel="noreferrer" class="stack-external-link" id="externalLink" aria-label="Abrir enlace externo">
+                    <i data-lucide="external-link"></i>
+                </a>
+            </div>
+
+            <!-- STATS -->
+            <div class="stats-row">
+                <div class="metric-card">
+                    <div class="metric-icon blue">
+                        <i data-lucide="layers"></i>
+                    </div>
+                    <div class="metric-info">
+                        <span class="metric-label">Cards</span>
+                        <span class="metric-value">5</span>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon green">
+                        <i data-lucide="rotate-cw"></i>
+                    </div>
+                    <div class="metric-info">
+                        <span class="metric-label">Auto-avance</span>
+                        <span class="metric-value">2s</span>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon purple">
+                        <i data-lucide="move-3d"></i>
+                    </div>
+                    <div class="metric-info">
+                        <span class="metric-label">Efecto</span>
+                        <span class="metric-value">3D</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast" hidden>
+        <i data-lucide="check-circle-2"></i>
+        <span id="toastText">Acción completada</span>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

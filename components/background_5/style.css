@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-app: #050a14;
+    --text-primary: #e0f0ff;
+    --text-secondary: #7a9ab5;
+    --ns-muted: #3d5a70;
+    --accent: #00d4ff;
+}
+
+body {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg-app);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.app {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    user-select: none;
+}
+
+#shaderCanvas {
+    position: fixed;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.main-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 40px 24px;
+    pointer-events: none;
+}
+
+.main-content > * {
+    pointer-events: auto;
+}
+
+.content-container {
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+    align-items: center;
+}
+
+.page-header {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+}
+
+.badge-tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    background: rgba(0, 212, 255, 0.12);
+    color: #4dd8ff;
+    border: 1px solid rgba(0, 212, 255, 0.22);
+}
+
+.page-title {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
+}
+
+.page-subtitle {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: 400px;
+}

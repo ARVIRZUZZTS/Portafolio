@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HeroSection - Glassmorphism</title>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <a href="#" class="navbar-logo">
+                <i data-lucide="zap" class="navbar-logo-icon"></i>
+                <span>Winkode</span>
+            </a>
+            <div class="navbar-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- =====================================================
+         HERO SECTION
+    ====================================================== -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+
+        <div class="hero-container">
+            <div class="hero-grid">
+
+                <!-- Left Column -->
+                <div class="hero-left">
+
+                    <!-- Badge -->
+                    <div class="animate-fade-in delay-100">
+                        <div class="badge">
+                            <span class="badge-text">
+                                Award-Winning Design
+                                <i data-lucide="star" class="badge-icon"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Heading -->
+                    <h1 class="animate-fade-in delay-200 hero-heading">
+                        Crafting Digital<br />
+                        <span class="hero-heading-gradient">Experiences</span><br />
+                        That Matter
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="animate-fade-in delay-300 hero-description">
+                        We design interfaces that combine beauty with functionality,
+                        creating seamless experiences that users love and businesses thrive on.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="animate-fade-in delay-400 hero-ctas">
+                        <button class="cta-primary group">
+                            View Portfolio
+                            <i data-lucide="arrow-right" class="cta-icon"></i>
+                        </button>
+                        <button class="cta-secondary group">
+                            <i data-lucide="play" class="cta-icon"></i>
+                            Watch Showreel
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Right Column -->
+                <div class="hero-right">
+
+                    <!-- Stats Card -->
+                    <div class="animate-fade-in delay-500 stats-card">
+                        <div class="stats-card-glow"></div>
+
+                        <div class="stats-card-content">
+                            <div class="stats-header">
+                                <div class="stats-icon-wrapper">
+                                    <i data-lucide="target" class="stats-icon"></i>
+                                </div>
+                                <div>
+                                    <div class="stats-value">150+</div>
+                                    <div class="stats-label">Projects Delivered</div>
+                                </div>
+                            </div>
+
+                            <!-- Progress Bar -->
+                            <div class="progress-section">
+                                <div class="progress-header">
+                                    <span class="progress-label">Client Satisfaction</span>
+                                    <span class="progress-value">98%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="progressFill"></div>
+                                </div>
+                            </div>
+
+                            <div class="stats-divider"></div>
+
+                            <!-- Mini Stats -->
+                            <div class="mini-stats">
+                                <div class="mini-stat">
+                                    <span class="mini-stat-value">5+</span>
+                                    <span class="mini-stat-label">Years</span>
+                                </div>
+                                <div class="mini-stat-divider"></div>
+                                <div class="mini-stat">
+                                    <span class="mini-stat-value">24/7</span>
+                                    <span class="mini-stat-label">Support</span>
+                                </div>
+                                <div class="mini-stat-divider"></div>
+                                <div class="mini-stat">
+                                    <span class="mini-stat-value">100%</span>
+                                    <span class="mini-stat-label">Quality</span>
+                                </div>
+                            </div>
+
+                            <!-- Tag Pills -->
+                            <div class="tag-pills">
+                                <div class="tag-pill">
+                                    <span class="ping-wrapper">
+                                        <span class="animate-ping ping-circle"></span>
+                                        <span class="ping-dot"></span>
+                                    </span>
+                                    ACTIVE
+                                </div>
+                                <div class="tag-pill">
+                                    <i data-lucide="crown" class="tag-pill-icon"></i>
+                                    PREMIUM
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Marquee Card -->
+                    <div class="animate-fade-in delay-500 marquee-card">
+                        <h3 class="marquee-title">Trusted by Industry Leaders</h3>
+
+                        <div class="marquee-wrapper">
+                            <div class="marquee-track" id="marqueeTrack"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Component Badge -->
+        <div class="component-badge">
+            <span class="component-badge-text">Hero</span>
+            <span class="component-badge-title">HeroSection</span>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

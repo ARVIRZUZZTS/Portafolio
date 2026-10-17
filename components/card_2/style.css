@@ -1,0 +1,338 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background: #18181b;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+
+/* =================================
+   NAVBAR
+================================= */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.navbar-logo svg {
+    width: 28px;
+    height: 28px;
+}
+
+
+/* =================================
+   PÁGINA
+================================= */
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px 100px;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.page-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 13px;
+    font-weight: 500;
+    color: #a1a1aa;
+    margin-bottom: 16px;
+}
+
+.page-header h1 {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #ffffff;
+}
+
+
+/* =================================
+   ESCENA 3D
+================================= */
+
+.card-scene {
+    perspective: 1000px;
+}
+
+
+/* =================================
+   GLASS CARD
+================================= */
+
+.glass-card {
+    position: relative;
+    width: 290px;
+    height: 300px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #27272a, #09090b);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+    transition:
+        transform 0.15s ease-out,
+        box-shadow 0.4s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.glass-card:hover {
+    box-shadow:
+        30px 50px 25px -40px rgba(0, 0, 0, 0.3),
+        0 25px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =================================
+   CAPA DE VIDRIO
+================================= */
+
+.glass-layer {
+    position: absolute;
+    inset: 2px;
+    border-radius: 55px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transform-style: preserve-3d;
+    transform: translate3d(0, 0, 25px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+/* =================================
+   CONTENIDO
+================================= */
+
+.card-content {
+    position: absolute;
+    inset: 0;
+    padding: 100px 28px 0;
+    transform: translate3d(0, 0, 26px);
+    transform-style: preserve-3d;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 900;
+    color: #ffffff;
+    display: block;
+}
+
+.card-description {
+    margin-top: 20px;
+    font-size: 15px;
+    color: #d4d4d8;
+    display: block;
+    line-height: 1.5;
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+.card-footer {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform-style: preserve-3d;
+    transform: translate3d(0, 0, 26px);
+}
+
+
+/* =================================
+   BOTONES SOCIALES
+================================= */
+
+.social-buttons {
+    display: flex;
+    gap: 10px;
+    transform-style: preserve-3d;
+}
+
+.social-btn {
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    border: none;
+    background: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 7px 5px -5px rgba(0, 0, 0, 0.5);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.social-btn svg {
+    width: 16px;
+    height: 16px;
+    color: #000000;
+    transition: color 0.2s ease;
+}
+
+.glass-card:hover .social-btn {
+    box-shadow: -5px 20px 10px rgba(0, 0, 0, 0.2);
+    transform: translate3d(0, 0, 50px);
+}
+
+.social-btn:hover {
+    background: #000000;
+}
+
+.social-btn:hover svg {
+    color: #ffffff;
+}
+
+.social-btn:active {
+    background: #facc15;
+}
+
+
+/* =================================
+   VIEW MORE
+================================= */
+
+.view-more {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 40%;
+    gap: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffffff;
+    transition:
+        transform 0.2s ease;
+}
+
+.view-more svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.2s ease;
+}
+
+.view-more:hover {
+    transform: translate3d(0, 0, 10px);
+}
+
+.view-more:hover svg {
+    transform: translateY(2px);
+}
+
+
+/* =================================
+   CÍRCULOS
+================================= */
+
+.circles {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform-style: preserve-3d;
+}
+
+.circle {
+    position: absolute;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: -10px 10px 20px rgba(100, 100, 111, 0.2);
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+}
+
+.circle-logo {
+    display: grid;
+    place-content: center;
+    background: #ffffff;
+    box-shadow: -10px 10px 20px rgba(100, 100, 111, 0.2);
+}
+
+.glass-card:hover .circle-logo {
+    transform: translate3d(0, 0, 120px) !important;
+}
+
+.logo-svg {
+    width: 20px;
+    height: 20px;
+    fill: #000000;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 16px 20px;
+    }
+
+    .page {
+        padding: 40px 16px 80px;
+    }
+
+    .page-header {
+        margin-bottom: 40px;
+    }
+
+    .page-header h1 {
+        font-size: 32px;
+    }
+
+    .glass-card {
+        width: 100%;
+        max-width: 290px;
+    }
+}

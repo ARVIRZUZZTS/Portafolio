@@ -1,128 +1,444 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David E. Chavez Totora – Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="meta.title">David E. ChÃ¡vez Totora Â· Desarrollador de Software</title>
+  <meta name="description" data-i18n-attr="content:meta.description" content="Portafolio de David Eduardo ChÃ¡vez Totora, ingeniero en informÃ¡tica de Cochabamba, Bolivia. Proyectos, stack y contacto.">
+  <meta name="author" content="David Eduardo ChÃ¡vez Totora">
+  <meta name="theme-color" content="#0e0a2f">
+  <link rel="canonical" href="https://arvirzuzzts.vercel.app/">
+  <link rel="icon" type="image/webp" href="assets/img/logo-bicolor.webp">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" data-i18n-attr="content:meta.title" content="David E. ChÃ¡vez Totora Â· Desarrollador de Software">
+  <meta property="og:description" data-i18n-attr="content:meta.description" content="Portafolio de David Eduardo ChÃ¡vez Totora, ingeniero en informÃ¡tica de Cochabamba, Bolivia.">
+  <meta property="og:url" content="https://arvirzuzzts.vercel.app/">
+  <meta property="og:locale" content="es_LA">
+  <meta property="og:image" content="https://arvirzuzzts.vercel.app/assets/img/logo-bicolor.webp">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "David Eduardo ChÃ¡vez Totora",
+    "jobTitle": "Ingeniero en InformÃ¡tica",
+    "email": "mailto:virzuzz12345@gmail.com",
+    "url": "https://arvirzuzzts.vercel.app",
+    "address": { "@type": "PostalAddress", "addressLocality": "Cochabamba", "addressCountry": "BO" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidad Mayor de San SimÃ³n" },
+    "sameAs": [
+      "https://github.com/ARVIRZUZZTS",
+      "https://www.linkedin.com/in/david-eduardo-chavez-totora-9a5618304/"
+    ]
+  }
+  </script>
 </head>
 <body>
 
-    <header>
-        <img src="https://drive.google.com/uc?export=view&id=1h94PrXRzsxWECNfs8Uq3NYzkVc1kOnMN" alt="logo" class="logo">
-        <h1>ARVIRZUZZTS</h1>
-    </header>
+  <a class="skip-link" href="#main" data-i18n="nav.skip">Saltar al contenido</a>
+  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Progreso de lectura" aria-hidden="true"></div>
 
-    <main>
+  <!-- Fondo global WebGL: fluted glass morado -->
+  <div class="bg-fluted" aria-hidden="true"><canvas data-fluted-canvas></canvas></div>
 
-        <div class="hero">
-            <div class="hero-card">
-                <div class="hero-info">
-                    <h1 class="hero-name">David E.<br>Chavez Totora</h1>
-                    <p class="hero-uni">Universidad Mayor de San Simón</p>
-                    <p class="hero-role">Ingeniero en Informática</p>
-                    <p class="hero-meta"><span>Cumple:</span> 04/06 &nbsp;·&nbsp; 21 años</p>
-                    <a href="https://github.com/ARVIRZUZZTS" target="_blank">
-                        <button class="icon-btn" title="GitHub">
-                            <img src="https://drive.google.com/uc?export=view&id=1jsAcDth0aBVenGn7RSi-_dSHfDI703SU" alt="GitHub">
-                        </button>
-                    </a>
-                
-                    <a href="https://www.linkedin.com/in/david-eduardo-chavez-totora-9a5618304/" target="_blank">
-                        <button class="icon-btn" title="LinkedIn">
-                            <img src="https://drive.google.com/uc?export=view&id=1BCl9ofUCJ0LxJvgza3zpqiGnlNhw1E10" alt="LinkedIn">
-                        </button>
-                    </a>
-                
-                    <a href="mailto:virzuzz12345@gmail.com">
-                        <button class="icon-btn" title="Email">
-                            <img src="https://drive.google.com/uc?export=view&id=1Md8VEI5G2v9pvKAS7oQj0cMR8D_2K48C" alt="Email">
-                        </button>
-                    </a>
-                
-                    <a href="https://www.facebook.com/profile.php?id=100014122514727&locale=es_LA" target="_blank">
-                        <button class="icon-btn" title="Facebook">
-                            <img src="https://drive.google.com/uc?export=view&id=18xbRNHBlclte_aSX5hQ85hcHtA7AbkkA" alt="Facebook">
-                        </button>
-                    </a>
-                </div>
-                <div class="hero-img-wrap">
-                    <img src="https://drive.google.com/uc?export=view&id=1QzecNxGB9k0LMOc6AUe2WtrpfFXnpi24" alt="David Chavez" class="profile-img">
-                </div>
+  <!-- ============================ NAVBAR ============================ -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar__inner" aria-label="Principal">
+      <a class="navbar__brand" href="#top">
+        <img class="brand-logo" src="assets/img/logo-bicolor.webp" alt="ARVIRZUZZTS" width="747" height="443" decoding="async">
+        <span class="navbar__brand-name">ARVIRZUZZTS</span>
+      </a>
+
+      <div class="navbar__links">
+        <a href="#sobre-mi" data-i18n="nav.about">Sobre mÃ­</a>
+        <a href="#proyectos" data-i18n="nav.projects">Proyectos</a>
+        <a href="#stack" data-i18n="nav.stack">Stack</a>
+        <a href="#libros" data-i18n="nav.books">Libros</a>
+        <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+      </div>
+
+      <div class="navbar__actions">
+        <div class="lang-switch" role="group">
+          <span aria-hidden="true" data-icon="languages"></span>
+          <label class="sr-only" for="langSelect" data-i18n="nav.langLabel">Idioma</label>
+          <select id="langSelect">
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+            <option value="pt">PT</option>
+          </select>
+        </div>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema">
+          <span aria-hidden="true" data-icon="sun" class="icon-sun"></span>
+          <span aria-hidden="true" data-icon="moon" class="icon-moon"></span>
+        </button>
+
+        <button class="icon-btn" id="settingsBtn" type="button"
+                popovertarget="settingsPanel" popovertargetaction="toggle"
+                aria-label="Ajustes de calidad y animaciÃ³n">
+          <span aria-hidden="true" data-icon="sliders-horizontal"></span>
+        </button>
+        <a class="navbar__cta" href="#contacto" data-i18n="nav.cta">Â¿Hablamos?</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menÃº">
+        <span aria-hidden="true" data-icon="menu" class="icon-menu"></span>
+        <span aria-hidden="true" data-icon="x" class="icon-close"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===================== PANEL DE AJUSTES ===================== -->
+  <div class="settings" id="settingsPanel" popover="auto" aria-label="Ajustes de calidad y animaciÃ³n">
+
+    <div class="settings__group">
+      <span class="settings__label" data-i18n="settings.quality">Calidad del fondo</span>
+      <div class="settings__seg" role="radiogroup" aria-label="Calidad del fondo" data-setting="quality">
+        <button type="button" role="radio" data-value="alta" data-i18n="settings.high">Alta</button>
+        <button type="button" role="radio" data-value="media" data-i18n="settings.medium">Media</button>
+        <button type="button" role="radio" data-value="baja" data-i18n="settings.low">Baja</button>
+      </div>
+      <p class="settings__hint" data-i18n="settings.qualityHint">Menos pÃ­xeles = mÃ¡s fluido. Afecta solo al shader de fondo.</p>
+    </div>
+
+    <div class="settings__group">
+      <span class="settings__label" data-i18n="settings.motion">Movimiento</span>
+      <div class="settings__seg" role="radiogroup" aria-label="Nivel de movimiento" data-setting="motion">
+        <button type="button" role="radio" data-value="full" data-i18n="settings.full">Completo</button>
+        <button type="button" role="radio" data-value="reduced" data-i18n="settings.reduced">Reducido</button>
+        <button type="button" role="radio" data-value="off" data-i18n="settings.off">Off</button>
+      </div>
+      <p class="settings__hint" data-i18n="settings.motionHint">Reducido quita marquesinas, auto-avance y efectos 3D. Off detiene ademÃ¡s la tinta.</p>
+    </div>
+
+    <div class="settings__group">
+      <label class="settings__switch">
+        <input type="checkbox" id="bgToggle" checked>
+        <span class="settings__switch-track" aria-hidden="true"></span>
+        <span data-i18n="settings.background">Fondo animado</span>
+      </label>
+      <p class="settings__hint" data-i18n="settings.backgroundHint">DesactÃ­valo para apagar el WebGL y liberar la GPU.</p>
+    </div>
+
+    <div class="settings__foot">
+      <span data-i18n="settings.overrideOs">Esta preferencia ignora la del sistema operativo.</span>
+    </div>
+  </div>
+
+  <!-- ======================== MENÃš MÃ“VIL ======================== -->
+  <div class="menu-overlay" id="menuOverlay" hidden></div>
+  <aside class="mobile-menu" id="mobileMenu" aria-label="MenÃº mÃ³vil">
+    <a href="#top" data-i18n="nav.home">Inicio</a>
+    <a href="#sobre-mi" data-i18n="nav.about">Sobre mÃ­</a>
+    <a href="#proyectos" data-i18n="nav.projects">Proyectos</a>
+    <a href="#stack" data-i18n="nav.stack">Stack</a>
+    <a href="#libros" data-i18n="nav.books">Libros</a>
+    <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+    <a href="#contacto" class="mobile-menu__cta" data-i18n="nav.cta">Â¿Hablamos?</a>
+    <div class="mobile-menu__foot">ARVIRZUZZTS<br>Cochabamba, Bolivia</div>
+  </aside>
+
+  <main id="main">
+
+    <!-- ============================= HERO ============================= -->
+    <section class="hero" id="top">
+      <div class="hero-container">
+        <div class="hero-grid">
+
+          <div class="hero-left">
+            <div class="animate-fade-in delay-100">
+              <span class="badge"><span aria-hidden="true" data-icon="sparkles"></span><span data-i18n="hero.badge">Disponible</span></span>
             </div>
-        </div>
 
-        <div class="content">
+            <h1 class="hero-heading animate-fade-in delay-200">
+              David E.<br><span class="hero-heading-gradient" data-i18n="hero.name">ChÃ¡vez Totora</span>
+            </h1>
 
-            <section class="section" id="sobre-mi">
-                <h2 class="section-title"><span>01</span> Sobre mí</h2>
-                <p>Soy un estudiante de Informática en la Universidad Mayor de San Simón, con una gran pasión por la tecnología y el desarrollo de software. Me encanta aprender nuevas habilidades y enfrentar desafíos que me permitan crecer profesionalmente. Mi objetivo es convertirme en un ingeniero de software exitoso y contribuir al mundo de la tecnología con mis conocimientos y habilidades.</p>
-            </section>
+            <p class="hero-role animate-fade-in delay-200" data-i18n="hero.role">Ingeniero en InformÃ¡tica Â· Desarrollador Full Stack</p>
 
-            <section class="section" id="habilidades">
-                <h2 class="section-title"><span>02</span> Habilidades</h2>
-                <ul class="skills-list">
-                    <li>Programación en Python (medio), Java y C++</li>
-                    <li>Desarrollo web con HTML, CSS y JavaScript, con PHP y Laravel</li>
-                    <li>Desarrollo de aplicaciones móviles con Flutter</li>
-                    <li>Node.js para Bots con IA y automatizaciones con la WhatsApp API</li>
-                    <li>Bases de datos SQL y NoSQL</li>
-                    <li>Control de versiones con Git</li>
-                    <li>Trabajo en equipo y comunicación efectiva</li>
-                </ul>
-            </section>
+            <p class="hero-description animate-fade-in delay-300" data-i18n="hero.phrase"></p>
 
-            <section class="section" id="proyectos">
-                <h2 class="section-title"><span>03</span> Proyectos en Empresas</h2>
-                <p class="projects-intro">Durante mi experiencia laboral, pude trabajar en distintos proyectos enfrentando desafíos y aprendiendo nuevas habilidades. Algunos de los proyectos en los que participé incluyen:</p>
-                <ul class="projects-list">
-                    <li>
-                        <span class="project-tag">ESC</span>
-                        <div>
-                            <strong>Control de encomiendas</strong> — Gestión en tiempo real con impresión de tickets y facturas. <em>Laravel + MySQL</em>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="project-tag">ESC</span>
-                        <div>
-                            <strong>Control de pasajeros y viajes</strong> — Gestión de viajes con impresión de tickets y facturas. <em>HTML, CSS, JS, PHP</em>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="project-tag">ESC</span>
-                        <div>
-                            <strong>Control de flotas</strong> — Gestión de mantenimiento para empresa de transporte. <em>Laravel + MySQL</em>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="project-tag">ESC</span>
-                        <div>
-                            <strong>Control de pasajeros retro</strong> — Entorno Windows 2000/XP, proyecto legacy. <em>HTML, CSS, JS, PHP</em>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="project-tag">Vika</span>
-                        <div>
-                            <strong>Parque infantil NFC</strong> — Gestión de parque de niños con tecnología NFC. <em>Flutter</em>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="project-tag">ESC</span>
-                        <div>
-                            <strong>Notificaciones WhatsApp</strong> — Automatización de notificaciones para empresa de transporte. <em>Node.js + WhatsApp API</em>
-                        </div>
-                    </li>
-                </ul>
-            </section>
+            <div class="hero-ctas animate-fade-in delay-400">
+              <a class="cta-primary" href="#proyectos"><span data-i18n="hero.cta1">Ver mis proyectos</span><span aria-hidden="true" data-icon="arrow-right"></span></a>
+              <a class="cta-secondary" href="#contacto"><span data-i18n="hero.cta2">ContÃ¡ctame</span></a>
+              <a class="cta-secondary" href="resources/David%20Eduardo%20Chavez%20Totora-CV.pdf" target="_blank" rel="noopener"><span data-i18n="hero.cv">Descargar CV</span><span aria-hidden="true" data-icon="download"></span></a>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <!-- Tarjeta de estadÃ­sticas -->
+            <div class="stats-card animate-fade-in delay-500">
+              <div class="stats-card-glow" aria-hidden="true"></div>
+              <div class="stats-card-content">
+                <div class="stats-header">
+                  <div class="stats-icon-wrapper" aria-hidden="true"><span data-icon="target"></span></div>
+                  <div>
+                    <div class="stats-value" data-i18n="hero.statsValue">6+</div>
+                    <div class="stats-label" data-i18n="hero.statsTitle">Proyectos entregados</div>
+                  </div>
+                </div>
+                <div class="progress-section">
+                  <div class="progress-header">
+                    <span data-i18n="hero.progressLabel">Meta actual</span>
+                    <span class="progress-value">10%</span>
+                  </div>
+                  <div class="progress-bar"><div class="progress-fill" id="progressFill" style="--progress:0.10"></div></div>
+                </div>
+                <div class="stats-divider" aria-hidden="true"></div>
+                <div class="mini-stats">
+                  <div class="mini-stat"><span class="mini-stat-value">21</span><span class="mini-stat-label" data-i18n="hero.statYears">AÃ±os</span></div>
+                  <div class="mini-stat-divider" aria-hidden="true"></div>
+                  <div class="mini-stat"><span class="mini-stat-value">Cbba</span><span class="mini-stat-label" data-i18n="hero.statCity">Ciudad</span></div>
+                  <div class="mini-stat-divider" aria-hidden="true"></div>
+                  <div class="mini-stat"><span class="mini-stat-value" data-i18n="hero.statFocusValue">Backend</span><span class="mini-stat-label" data-i18n="hero.statFocus">Enfoque</span></div>
+                </div>
+                <div class="tag-pills">
+                  <span class="tag-pill"><span class="ping-wrapper" aria-hidden="true"><span class="ping-circle"></span><span class="ping-dot"></span></span><span data-i18n="hero.tagOpen">DISPONIBLE</span></span>
+                  <span class="tag-pill"><span class="tag-pill-icon" aria-hidden="true" data-icon="zap"></span><span data-i18n="hero.tagFreelance">FREELANCE</span></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Marquee infinito del stack -->
+            <div class="marquee-card animate-fade-in delay-500">
+              <h2 class="marquee-title" data-i18n="hero.marqueeTitle">Mi stack tecnolÃ³gico</h2>
+              <div class="marquee-wrapper">
+                <div class="marquee-track" id="marqueeTrack"></div>
+              </div>
+            </div>
+          </div>
 
         </div>
+      </div>
+    </section>
 
-    </main>
+    <!-- ========================== SOBRE MÃ ========================== -->
+    <section class="section" id="sobre-mi">
+      <div class="section__inner">
+        <div class="section__head section__head--split">
+          <div>
+            <p class="section-title" data-i18n="about.kicker">Sobre mÃ­</p>
+            <h2 class="section__title-big" data-i18n="about.title">QuiÃ©n soy y cÃ³mo trabajo</h2>
+          </div>
+          <div class="logo-ink" id="logoInk" data-logo-host aria-hidden="true"><span class="logo-ink__glow"></span></div>
+        </div>
 
-    <footer>
-        <p>David E. Chavez Totora &copy; 2025 · UMSS · Cochabamba, Bolivia</p>
-    </footer>
+        <!-- Banda con tinta reactiva al cursor (DyeWhorl) -->
+        <div class="ink-band about-band">
+          <canvas class="ink-band__canvas" data-ink-canvas></canvas>
+          <div class="about-grid">
 
+            <div class="card-scene reveal" data-tilt-card>
+              <article class="glass-card">
+                <div class="glass-layer" aria-hidden="true"></div>
+                <div class="card-content">
+                  <h3 class="card-title" data-i18n="about.c1.title">Sobre quiÃ©n soy</h3>
+                  <p class="card-description" data-i18n="about.c1.desc"></p>
+                </div>
+                <div class="card-footer">
+                  <span class="card-tagline" data-i18n="about.c1.footer">UMSS Â· Cochabamba</span>
+                </div>
+                <div class="circles" aria-hidden="true">
+                  <div class="circle" style="width:170px;top:8px;right:8px;transform:translate3d(0,0,20px);transition-delay:0s"></div>
+                  <div class="circle" style="width:140px;top:10px;right:10px;transform:translate3d(0,0,40px);transition-delay:.4s"></div>
+                  <div class="circle" style="width:110px;top:17px;right:17px;transform:translate3d(0,0,60px);transition-delay:.8s"></div>
+                  <div class="circle" style="width:80px;top:23px;right:23px;transform:translate3d(0,0,80px);transition-delay:1.2s"></div>
+                  <div class="circle circle-logo" style="width:50px;top:30px;right:30px;transform:translate3d(0,0,100px);transition-delay:1.6s"><span data-icon="user"></span></div>
+                </div>
+              </article>
+            </div>
+
+            <div class="card-scene reveal" data-tilt-card>
+              <article class="glass-card">
+                <div class="glass-layer" aria-hidden="true"></div>
+                <div class="card-content">
+                  <h3 class="card-title" data-i18n="about.c2.title">Sobre lo que hago</h3>
+                  <p class="card-description" data-i18n="about.c2.desc"></p>
+                </div>
+                <div class="card-footer">
+                  <span class="card-tagline" data-i18n="about.c2.footer">Full Stack Â· MÃ³vil</span>
+                </div>
+                <div class="circles" aria-hidden="true">
+                  <div class="circle" style="width:170px;top:8px;right:8px;transform:translate3d(0,0,20px);transition-delay:0s"></div>
+                  <div class="circle" style="width:140px;top:10px;right:10px;transform:translate3d(0,0,40px);transition-delay:.4s"></div>
+                  <div class="circle" style="width:110px;top:17px;right:17px;transform:translate3d(0,0,60px);transition-delay:.8s"></div>
+                  <div class="circle" style="width:80px;top:23px;right:23px;transform:translate3d(0,0,80px);transition-delay:1.2s"></div>
+                  <div class="circle circle-logo" style="width:50px;top:30px;right:30px;transform:translate3d(0,0,100px);transition-delay:1.6s"><span data-icon="code"></span></div>
+                </div>
+              </article>
+            </div>
+
+            <div class="card-scene reveal" data-tilt-card>
+              <article class="glass-card">
+                <div class="glass-layer" aria-hidden="true"></div>
+                <div class="card-content">
+                  <h3 class="card-title" data-i18n="about.c3.title">CÃ³mo trabajo</h3>
+                  <ul class="value-list">
+                    <li><span aria-hidden="true" data-icon="check"></span><span data-i18n="about.c3.v1">Trabajo duro</span></li>
+                    <li><span aria-hidden="true" data-icon="check"></span><span data-i18n="about.c3.v2">Aprendizaje continuo</span></li>
+                    <li><span aria-hidden="true" data-icon="check"></span><span data-i18n="about.c3.v3">ComunicaciÃ³n clara</span></li>
+                    <li><span aria-hidden="true" data-icon="check"></span><span data-i18n="about.c3.v4">CÃ³digo limpio</span></li>
+                  </ul>
+                </div>
+                <div class="card-footer">
+                  <span class="card-tagline" data-i18n="hero.tagFreelance">FREELANCE</span>
+                </div>
+                <div class="circles" aria-hidden="true">
+                  <div class="circle" style="width:170px;top:8px;right:8px;transform:translate3d(0,0,20px);transition-delay:0s"></div>
+                  <div class="circle" style="width:140px;top:10px;right:10px;transform:translate3d(0,0,40px);transition-delay:.4s"></div>
+                  <div class="circle" style="width:110px;top:17px;right:17px;transform:translate3d(0,0,60px);transition-delay:.8s"></div>
+                  <div class="circle" style="width:80px;top:23px;right:23px;transform:translate3d(0,0,80px);transition-delay:1.2s"></div>
+                  <div class="circle circle-logo" style="width:50px;top:30px;right:30px;transform:translate3d(0,0,100px);transition-delay:1.6s"><span data-icon="heart"></span></div>
+                </div>
+              </article>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================== PROYECTOS ========================== -->
+    <section class="section" id="proyectos">
+      <div class="section__inner">
+        <div class="section__head">
+          <p class="section-title" data-i18n="projects.kicker">Proyectos</p>
+          <h2 class="section__title-big" data-i18n="projects.title">Casos de estudio</h2>
+          <p class="section__subtitle" data-i18n="projects.subtitle"></p>
+        </div>
+        <div class="projects-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============================ STACK ============================ -->
+    <section class="section" id="stack">
+      <div class="section__inner">
+        <div class="section__head">
+          <p class="section-title" data-i18n="stack.kicker">Stack</p>
+          <h2 class="section__title-big" data-i18n="stack.title">TecnologÃ­as que uso</h2>
+          <p class="section__subtitle" data-i18n="stack.subtitle"></p>
+        </div>
+        <div class="stack-grid" id="stackGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============================ LIBROS ============================ -->
+    <section class="section books-section" id="libros">
+      <div class="section__inner">
+        <div class="section__head">
+          <p class="section-title" data-i18n="books.kicker">Libros</p>
+          <h2 class="section__title-big" data-i18n="books.title">Lo que leo y me forma</h2>
+          <p class="section__subtitle" data-i18n="books.subtitle"></p>
+        </div>
+        <div class="card-stack" id="bookStack">
+          <div class="stack-stage">
+            <div class="stack-spotlight" aria-hidden="true"></div>
+            <div class="stack-cards" id="bookStackCards"></div>
+          </div>
+          <div class="stack-dots" id="bookStackDots" role="tablist" aria-label="Libros"></div>
+          <p class="stack-hint" aria-hidden="true">â† Â· â†’</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== CONTACTO =========================== -->
+    <section class="section" id="contacto">
+      <div class="section__inner">
+        <div class="section__head">
+          <p class="section-title" data-i18n="contact.kicker">Contacto</p>
+          <h2 class="section__title-big" data-i18n="contact.title">Â¿Hablamos?</h2>
+          <p class="section__subtitle" data-i18n="contact.subtitle"></p>
+        </div>
+
+        <div class="contact-panel reveal">
+          <div class="contact-grid">
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="field">
+                <label for="cName" data-i18n="contact.name">Nombre</label>
+                <input id="cName" name="name" type="text" autocomplete="name" required data-i18n-attr="placeholder:contact.namePlaceholder" placeholder="Tu nombre completo">
+              </div>
+              <div class="field">
+                <label for="cEmail" data-i18n="contact.email">Correo</label>
+                <input id="cEmail" name="email" type="email" autocomplete="email" required data-i18n-attr="placeholder:contact.emailPlaceholder" placeholder="tucorreo@ejemplo.com">
+              </div>
+              <div class="field">
+                <label for="cMessage" data-i18n="contact.message">Mensaje</label>
+                <textarea id="cMessage" name="message" required data-i18n-attr="placeholder:contact.messagePlaceholder" placeholder="CuÃ©ntame en quÃ© estÃ¡s pensando..."></textarea>
+              </div>
+              <button class="cta-primary" type="submit" id="submitBtn">
+                <span id="submitLabel" data-i18n="contact.submit">Enviar mensaje</span>
+                <span aria-hidden="true" data-icon="send"></span>
+              </button>
+              <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            </form>
+
+            <aside class="contact-aside">
+              <a class="contact-card" id="whatsappCard" href="#" target="_blank" rel="noopener">
+                <span class="contact-card__icon" aria-hidden="true"><span data-icon="message-circle"></span></span>
+                <span>
+                  <span class="contact-card__title" data-i18n="contact.whatsapp">WhatsApp</span>
+                  <span class="contact-card__meta">+591 67231718</span>
+                </span>
+              </a>
+              <a class="contact-card" id="mailCard" href="#">
+                <span class="contact-card__icon" aria-hidden="true"><span data-icon="mail"></span></span>
+                <span>
+                  <span class="contact-card__title" data-i18n="contact.mail">Email</span>
+                  <span class="contact-card__meta">virzuzz12345@gmail.com</span>
+                </span>
+              </a>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <img class="brand-logo" src="assets/img/logo-bicolor.webp" alt="ARVIRZUZZTS" width="747" height="443" loading="lazy" decoding="async">
+      <p class="footer__rights" data-i18n="footer.rights">Hecho con paciencia, cÃ³digo limpio y bastante mÃºsica.</p>
+      <p class="footer__meta"><span>ARVIRZUZZTS Â· David E. ChÃ¡vez Totora Â· Cochabamba, Bolivia</span><br><span data-i18n="footer.stack">Vanilla HTML Â· CSS Â· JS Â· WebGL</span></p>
+    </div>
+  </footer>
+
+  <!-- ====================== DOCK SOCIAL FLOTANTE ====================== -->
+  <div class="social-dock" id="socialDock" role="complementary">
+    <div class="social-dock__list" id="socialDockList"></div>
+    <button class="dock-icon-wrapper" id="copyUrlBtn" type="button">
+      <span class="dock-icon dock-copy"><span aria-hidden="true" data-icon="link"></span></span>
+      <span class="dock-tooltip" data-i18n="dock.copy">Copiar enlace</span>
+    </button>
+  </div>
+
+  <!-- ============================= TOAST ============================= -->
+  <div class="toast" id="toast" hidden>
+    <span aria-hidden="true" data-icon="check"></span>
+    <span id="toastText">OK</span>
+  </div>
+
+  <!-- ============================ SCRIPTS ============================ -->
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/icons.js" defer></script>
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/bg-fluted.js" defer></script>
+  <script src="assets/js/bg-ink.js" defer></script>
+  <script src="assets/js/navbar.js" defer></script>
+  <script src="assets/js/sections.js" defer></script>
+  <script src="assets/js/settings.js" defer></script>
+  <script src="assets/js/dock.js" defer></script>
+  <script src="assets/js/carousel.js" defer></script>
+  <script src="assets/js/contact.js" defer></script>
 </body>
 </html>
