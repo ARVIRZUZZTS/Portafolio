@@ -158,10 +158,10 @@ button { font-family: inherit; }
 /* El logo original tiene la "R" casi blanca: en tema claro va sobre una
    placa blanca para conservar los colores exactos de la marca. */
 .theme-light .brand-logo {
-  background: #fff;
+  background: linear-gradient(120deg, var(--neon-magenta-deep), var(--neon-magenta));
   padding: 5px 9px;
   border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(76, 29, 149, 0.12);
+  box-shadow: var(--glow-magenta);
   filter: none;
 }
 
